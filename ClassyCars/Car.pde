@@ -1,13 +1,13 @@
 class Car {
-  float carX;
-  float carY;
+  float x;
+  float y;
   float size;
   float speed;
   color colour;
 
-  public Car(float carX, float carY) {
-    this.carX = carX;
-    this.carY = carY;
+  public Car(float x, float y) {
+    this.x = x;
+    this.y = y;
     size = width/25;
     speed = random(2,5);
     colour = color(255, 0, 0);
@@ -21,11 +21,11 @@ class Car {
   private void display() {
     rectMode(CENTER);
     fill(colour);
-    rect(carX, carY, size*2, size);
+    rect(x, y, size*2, size);
   }
 
   private void move() {
-    carX += speed;
+    x += speed;
   }
   
   public void setSize(float size) {
